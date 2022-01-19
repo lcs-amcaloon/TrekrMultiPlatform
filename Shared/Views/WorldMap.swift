@@ -23,11 +23,18 @@ struct WorldMap: View {
             
             MapAnnotation(coordinate: CLLocationCoordinate2D(latitude: location.latitude,        longitude: location.longitude)) {
                 
-                Image(location.country)
-                    .resizable()
-                    .cornerRadius(10)
-                    .frame(width: 80, height: 40)
-                    .shadow(radius: 3)
+                NavigationLink(destination: LocationDetail(location: location)) {
+                    VStack{
+                        Text(location.name)
+                        
+                        Image(location.country)
+                            .resizable()
+                            .cornerRadius(10)
+                            .frame(width: 80, height: 40)
+                            .shadow(radius: 3)
+                        
+                    }
+                }
                 
             }
             
