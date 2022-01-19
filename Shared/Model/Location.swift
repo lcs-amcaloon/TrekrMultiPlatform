@@ -16,7 +16,7 @@ struct Location: Decodable, Identifiable {
     let latitude: Double
     let longitude: Double
     let heroPicture: String
-    let addvisory: String
+    let advisory: String
     
     static let example = Location(id: 1,
                                   name: "The Highlands",
